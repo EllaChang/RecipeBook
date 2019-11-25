@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="shortcut icon" href="#" />
+    <link rel="stylesheet" type="text/css" href="home.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Trebuchet MS, Arial;
+            padding: 20px;
+            background: white;
+        }
+
+        /* Image */
+        img {
+            width: 100%;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        h2 {
+            text-align:center;
+            font-size:70px;
+            color:#6C3483;
+            margin:10px;
+        }
+
+        /* Header Blog Title */
+        .header {
+            font-family: Trebuchet MS, Arial;
+            font-size: 30px;
+            font-weight: bold;
+            color:#FFF59D;
+            background:#FFF59D;
+            text-decoration: underline;
+        }
+
+        /* Add a card effect for articles */
+        .card {
+            background-color: white;
+            padding: 20px;
+            margin-top: 20px;
+            -webkit-column-break-inside: avoid;
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+
+        .button {
+            width: 15%;
+            background-color: white;
+            color: black;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        .input {
+            width: 85%;
+            background-color: white;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            padding: 12px 20px;
+        }
+
+        .search-box {
+            margin:4px auto 0;
+            white-space: nowrap;
+            width: 60%;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <div class="header">
+            <div class="card" style="border:3px solid;border-color:#6C3483;box-shadow: 5px 10px #6C3483">
+                <h2>Recipe Book</h2>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="card" style="left:50%;position:relative;text-align: center; width:70%;">
+            <p style="left:-50%;position:relative;font-size:20px;">Welcome! You can search by either entering a keyword, or by
+                selecting values from the filter menu, or by
+                both!</p>
+        </div>
+    </div>
+    <div class="card" style="text-align: center; margin-bottom: 40px;">
+        <span class="custom-dropdown">
+            <select id="RecipeType">
+                <option value="NoPreference">-- Recipe Type --</option>
+                <option value="Appetizer">Appetizer</option>
+                <option value="MainCourse">Main Course</option>
+                <option value="Soup">Soup</option>
+                <option value="Salad">Salad</option>
+                <option value="Side">Side</option>
+                <option value="Dessert">Dessert</option>
+                <option value="Beverage">Beverage</option>
+            </select>
+        </span>
+        <span class="custom-dropdown">
+            <select id="CookingTime">
+                <option value="NoPreference">-- Cooking Time --</option>
+                <option value="1">0 - 15 min</option>
+                <option value="2">15 - 30 min</option>
+                <option value="3">30 - 45 min</option>
+                <option value="4">45 - 60 min</option>
+                <option value="5">More than 1 h</option>
+            </select>
+        </span>
+        <span class="custom-dropdown">
+            <select id="Season">
+                <option value="NoPreference">-- Season --</option>
+                <option value="Spring">Spring</option>
+                <option value="Summer">Summer</option>
+                <option value="Fall">Fall</option>
+                <option value="Winter">Winter</option>
+                <option value="YearRound">Year Round</option>
+            </select>
+        </span>
+        <span class="custom-dropdown">
+            <select id="SkillLevel">
+                <option value="NoPreference">-- Skill Level --</option>
+                <option value="Easy">Easy</option>
+                <option value="Average">Average</option>
+                <option value="Advanced">Advanced</option>
+                <option value="Expert">Expert</option>
+            </select>
+        </span>
+        <div class="search-box">
+            <input class="input" type="text" id="search" placeholder="Search by name...">
+            <button class="button" id="Search">Go</button>
+        </div>
+    </div>
+
+    <div style="margin:4px auto 0;width:70%;">
+        <div id="recipes" style="column-count:2;"></div>
+    </div>
+
+    <script src="js/home.js"></script>
+
+</body>
+
+</html>

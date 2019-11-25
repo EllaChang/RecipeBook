@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="#" />
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Add a gray background color with some padding */
+        body {
+            font-family: Trebuchet MS, Arial;
+            padding: 20px;
+            background: white;
+        }
+
+        /* Image */
+        img {
+            text-align: center;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 70px;
+            color: #6C3483;
+            margin: 10px;
+        }
+
+        /* Header/Blog Title */
+        .header {
+            font-family: Trebuchet MS, Arial;
+            font-size: 30px;
+            font-weight: bold;
+            color: #FFF59D;
+            background: #FFF59D;
+            text-decoration: underline;
+        }
+
+        /* Add a card effect for articles */
+        .card {
+            background-color: white;
+            padding: 20px;
+            margin-top: 20px;
+            -webkit-column-break-inside: avoid;
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+
+        .button {
+            width: 15%;
+            background-color: white;
+            color: black;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: center;
+            font-size: 16px;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <div class="header">
+            <div class="card" style="border:3px solid;border-color:#6C3483;box-shadow: 5px 10px #6C3483;">
+                <h2>Recipe Book</h2>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="card" style="margin-bottom:70px;">
+        <div>
+            <button class="button" id="Back" style="float:left;">Back</button>
+        </div>
+        <div style="left:50%;position:absolute;">
+            <p id="name" style="left:-50%;position:relative;margin-top:5px;font-size:30px;text-align:center;color:white;background:#6C3483;">Recipe
+                Name</p>
+        </div>
+    </div>
+
+    <div style="left:50%;position:absolute;width:70%">
+        <div class="card" id="recipe" style="left:-50%;position:relative;border:3px solid;border-color:#6C3483;box-shadow: 5px 10px #6C3483;">
+            <div class="img" id="image" style="text-align:center;"></div>
+        </div>
+    </div>
+
+    <script src="js/recipe.js"></script>
+
+</body>
+
+</html>
